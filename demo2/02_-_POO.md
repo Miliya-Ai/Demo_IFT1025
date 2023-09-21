@@ -19,6 +19,8 @@ public class Print {
 
 Expliquez le problème.
 ### Solution:
+  La méthode print est non statique(Print est défini comme une classe et non comme une méthode). 
+  Donc on ne peut pas l,appeler dans le main qui est statique. Cela provoque une erreur de compilation.
 
 
 # 2. Présenter les slides de JavaDoc et commenter la classe `De` précédente
@@ -74,12 +76,20 @@ maxN (exclus)
 
 ### Quels sont les attributs de l'objet ?
 	solution:
-### Quel est le constructeur ?
-	solution:
-### A-t-on besoin de variables/méthodes statiques ?
-	solution:
+    1. `nombreFaces` : c'est un attribut privé qui stocke le nombre de faces du dé(par exemple, 6 pour un dé à 6 faces). 
+    Cet attribut est initialisé dans le constructeur.
+    2. `rand`: C'est un object de la classe `Random` qui sera utilisé pour générer des nombres aléatoires. 
 
-#### ![img.png](img.png)
+### Quel est le constructeur ?
+    solution: Le constructeur public De(int nombreFaces) est utilisé pour créer une instance de la classe De. Lorsque 
+    vous instanciez un objet de cette classe, vous spécifiez le nombre de faces du dé en paramètre, ce qui permet d'initialiser les attributs nombreFaces et rand.
+
+
+### A-t-on besoin de variables/méthodes statiques ?
+	solution: Non, vous n'avez pas besoin de varibles statique pour cette classe, car chaque instance de la classe De 
+      encapsule les infos sur un dé spécifique et utilise un générateur de nombre aléatoires intépendant pour produire des résultats aléatoires.
+
+#### Variebles statiques et méthodes statiques
 1. `Constantes partagées` :
 ```java
 public class Math {

@@ -1,6 +1,6 @@
 /*public class Print {
 
-    public void print(int x) {
+    public static void print(int x) {
         System.out.println(x);
     }
 
@@ -25,7 +25,11 @@
 }*/
 
 // Solution 2: Créez un objet de type Print et appelez la méthode print sur cet objet
-/*public class Print {
+
+/**
+ * Classe permettant d'afficher un entier
+ */
+public class Print {
 
     public void print(int x) {
         System.out.println(x);
@@ -36,4 +40,4 @@
         Print printer = new Print(); // Crée une instance de la classe Print
         printer.print(n); // Appelle la méthode print sur l'instance créée
     }
-}*/
+}
