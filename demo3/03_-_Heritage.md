@@ -129,4 +129,16 @@ pokemon.attaquer(ennemis[0]); // Attaque l'Humain
 pokemon.attaquer(ennemis[1]); // Refuse d'attaquer le Pokemon
 ```
 
+Explication:
+```
+La méthode attaquer() de la classe Pokemon est surchargée. Il y a donc
+deux méthodes attaquer() dans la classe Pokemon. La méthode attaquer()
+qui prend un paramètre de type Pokemon est appelée lorsque l'on fait
+pokemon.attaquer(ennemis[1]). La méthode attaquer() qui prend un
+paramètre de type Personnage est appelée lorsque l'on fait
+pokemon.attaquer(ennemis[0]). 
+ex: Comme Squirtle a été instancé comme Personnage comme REFERENCE, alors le programme va le voir comme Personnage
+    Donc il va prendre la méthode de Personnage.
+```
+
 
