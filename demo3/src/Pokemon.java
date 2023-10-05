@@ -20,6 +20,22 @@ public class Pokemon extends Personnage {
         }
     }
 
+    	/*
+	 *
+5. Surchargez la fonction attaquer() de Pokemon :
+
+attaquer(Pokemon autre)
+
+Lorsqu'on demande à un Pokemon d'attaquer à un autre Pokemon, il ne
+l'attaque pas et dit plutôt (à coups de System.out.println) :
+
+    Pika pika pika pika !!
+	 */
+
+    // 就只是皮卡丘的话
+    /*public void attaquer(Pokemon autre){
+        System.out.println("Pika pika pika pika !!");
+    }*/
     public void attaquer(Personnage autre)
     {
         if(autre instanceof Pokemon) //verifie si autre est un Pokemon ou non
@@ -50,6 +66,11 @@ public class Pokemon extends Personnage {
         }
     }
 
+    /*Redéfinir également la méthode toString() de Pokemon pour qu'elle ajoute :
+
+    Nom : HP (capturé)
+
+    Dans le cas où le pokémon est capturé*/
     public String toString()
     {
         return super.toString() + (estCapture ? " (capturé)" : "");
