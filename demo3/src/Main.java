@@ -8,9 +8,14 @@ public class Main {
         // ATTN ici meme si c'est un pokemon, le type de REFERENCE est Personnage
 
         Pokemon pokemon = new Pokemon("Pikachu", 100, 100);
+        Pokemon newSquirtle = new Pokemon("newSquirtle", 100, 100);
 
-        pokemon.attaquer(ennemis[0]);
+        //pokemon.attaquer(ennemis[0]);
         pokemon.attaquer(ennemis[1]);
+        //pokemon.attaquer(newSquirtle);
+
+        System.out.println(ennemis[1].toString());
+
 
         /*
         * Personnage[] ennemis = new Personnage[2];

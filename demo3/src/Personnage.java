@@ -54,7 +54,10 @@ public abstract class Personnage {
     }
 
 
+    // Pour l'instant, nous allons l'utiliser comme fonction abstraite abstraite.
+    // Dans les exercices suivants, lorsque nous aurons besoin d'hériter de la classe Personnage, nous l'appellerons à nouveau en override.
     public abstract void afficher();
+
 
     /*3. Ajouter une méthode attaquer(Personnage autre) et un attribut HP
 	(health points) dans la classe abstraite Personnage
