@@ -45,8 +45,8 @@ La clé qui a été déplacée (ou laissée en place car elle était la plus gra
 - [Tri à bulles/Bubble sort](https://en.wikipedia.org/wiki/Bubble_sort)
 
 3. Benchmarker aussi un QuickSort (generer avec ChatGPT) avec un cas random vs pire cas.
-	bublesort, quicksort va etre plus rapide
-
+random quick sort: 587 0497, 137 5113, 131 2483
+worst case quick sort: 589 1287, 528 8067, 571 0038
 4. Regarder le javadoc de Arrays pour voir la liste des méthodes intéressants
 https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Arrays.html
 
