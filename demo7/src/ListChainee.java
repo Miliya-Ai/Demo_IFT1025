@@ -95,22 +95,4 @@ public class ListChainee {
             fin.prochain = new Noeud(valeur, null);
         }
     }
-
-    public void print(int n ){
-        Noeud n2 = this.premier;
-        while(n2 != null) {
-            System.out.println(n2.valeur);
-            n2 = n2.prochain;
-        }
-    }
-
-    public static void main(String[] args) {
-        ListChainee liste = new ListChainee();
-
-        liste.addFirst(1);
-        liste.addFirst(2);
-        liste.addFirst(3);
-
-        liste.print(5);
-    }
 }

@@ -1,0 +1,63 @@
+en transferrant un objet ArrayList<Mot>:
+    - overhead de sérialisation
+        Simple et intuitif, ne nécessitant qu’une seule sérialisation et un seul transfert.
+        Mais pour les grandes listes, si on n'a besoin que d’une partie des données de la liste, on doit quand même transférer la totalité de la liste. Il peut y avoir une surcharge importante de sérialisation et de transmission réseau.
+    - granularité de controle
+        Manque des contrôles plus fins et ne permet pas de transmettre uniquement les données requises
+    - latence
+        Latence plus longue car les données doivent être traitées après la transmission
+    - gérer interruptions réseau
+        le transfert peut pas continuer après une interruption une fois qu'il a commencé.
+    - complexité du code
+        plus simple de transférer toute la liste en une seule fois
+
+   transferrer un Mot à la fois et faire le serveur recreer sa propre ArrayList:
+    - overhead de sérialisation
+        Les objets Mot doivent être sérialisés et transmis un par un, ce qui peut augmenter la surcharge de communication du réseau. À le côté serveur, on doit désérialiser et créer les ArrayList une par une, ce qui peut augmenter la surcharge de traitement.
+        À l’inverse, lorsqu’il s’agit de listes volumineuses, la surcharge de sérialisation et de transmission réseau peut être réduite.
+    - granularité de controle
+        Meilleur contrôle avec une granularité fine et transmission uniquement des données requises
+    - latence
+        Latence plus courte car les données peuvent être traitées progressivement pendant la transmission
+    - gérer interruptions réseau
+        faciliter la gestion des interruptions du réseau, car le transfert peut continuer après une interruption.
+    - complexité du code
+        Le transfert un par un nécessite plus de logique pour gérer les objets individuels, ce qui augmente la complexité du code
+
+| Tables                     | un objet ArrayList<Mot> | un Mot à la fois |
+|----------------------------|:-----------------------:|-----------------:|
+| overhead de sérialisation  |                         |                  |
+| granularité de controle    |                         |                  |
+| latence                    |                         |                  |
+| gérer interruptions réseau |                         |                  |
+| complexité du code         |                         |                  |
+
+1. 传输一个ArrayList<Mot> 对象
+优点：
+简单直观，只需一次序列化和一次传输。
+相对较少的网络通信开销，因为只有一次传输。
+
+缺点：
+对于大型列表，可能存在较大的序列化和网络传输开销。
+如果只需要列表中的一部分数据，仍然需要传输整个列表。
+
+2. 逐个传输Mot对象并在服务器端重新创建ArrayList
+优点：
+更好的控制细粒度，只传输需要的数据。
+在处理大型列表时，可以降低序列化和网络传输的开销。
+
+缺点：
+需要逐个序列化和传输Mot对象，可能增加了网络通信开销。
+在服务器端需要逐个反序列化并构建ArrayList，可能增加了服务器端的处理开销。
+
+讨论主题：
+Overhead of Serialization (序列化开销):
+对于大型数据结构，一次性序列化整个列表可能会导致较大的开销，而逐个序列化可能会更灵活。
+Granularity of Control (控制的细粒度):
+如果需要更精细的控制，逐个传输并处理每个Mot对象可能更合适，但这可能增加代码的复杂性。
+Latency (延迟):
+一次性传输整个列表可能会减少总体延迟，但逐个传输可能导致更短的延迟，因为可以在传输过程中逐步处理数据。
+Handling Network Interruptions (处理网络中断):
+逐个传输的方式可能更容易处理网络中断，因为可以在中断后继续传输。
+Code Complexity (代码复杂性):
+一次性传输整个列表可能更简单，但逐个传输需要更多的逻辑来处理单个对象。

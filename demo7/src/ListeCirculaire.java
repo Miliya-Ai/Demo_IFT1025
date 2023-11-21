@@ -127,9 +127,9 @@ public class ListeCirculaire {
 	public static void main(String[] args) {
 		ListeCirculaire liste = new ListeCirculaire();
 
-		liste.print(5);
-
-		System.out.println("size: " + liste.size());
+//		liste.print(5);
+//
+//		System.out.println("size: " + liste.size());
 
 		System.out.println(liste.get(0)); // => 1
 		System.out.println(liste.get(3)); // => 1

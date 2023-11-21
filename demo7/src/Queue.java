@@ -6,8 +6,8 @@ import java.util.Stack;
  */
 public class Queue {
 
-    private Stack<Integer> stack1 = new Stack<Integer>();
-    private Stack<Integer> stack2 = new Stack<Integer>();
+    private Stack<Integer> stack1 = new Stack<>();
+    private Stack<Integer> stack2 = new Stack<>();
 
     /***
      * ajouter un élément à la queue/file

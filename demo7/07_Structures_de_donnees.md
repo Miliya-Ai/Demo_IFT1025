@@ -6,7 +6,6 @@ S'il y a N éléments dans votre File, combien d'opérations sont
 requises pour ajouter un nouvel élément ?
 
 ```text
-réponse : 
 Lorsque vous ajoutez un nouvel élément (enQueue), vous devez effectuer une opération qui consiste à pousser le nouvel 
 élément dans la pile1. Par conséquent, le nombre d’opérations pour ajouter un nouvel élément est O(1), indépendant du 
 nombre d’éléments, N. Quel que soit le nombre d'éléments dans la file d'attente, la complexité temporelle de l'opération 
@@ -122,7 +121,7 @@ Pour la liste contenant [1, 2, 3], on devrait pouvoir utiliser :
 Quel est l'ordre de grandeur du nombre d'opérations pour accéder à
 l'élément #i en fonction du nombre d'éléments N dans la liste ?
 Utilisez la notation O(...)
-
+9
 ```
 reponse : O(N), parce que la méthode get(i) doit parcourir la liste pour trouver l'élément i (i opérations)
 ```
