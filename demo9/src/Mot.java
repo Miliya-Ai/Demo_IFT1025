@@ -1,6 +1,6 @@
 import java.io.Serializable;
 
-public class Mot implements Serializable, Parlable {
+public class Mot implements Serializable{
 
 	private String leMot;
 
@@ -8,16 +8,9 @@ public class Mot implements Serializable, Parlable {
 		this.leMot = mot;
 	}
 
-	public void parle() {
-		System.out.println(this.leMot);
-	}
-
 	public String toString() {
 		return this.leMot;
 	}
 
-	public void traduire(String n) {
-		this.leMot = n;
-	}
 
 }

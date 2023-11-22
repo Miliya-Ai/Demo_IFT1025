@@ -23,12 +23,11 @@
 
 | Tables                     | un objet ArrayList<Mot> | un Mot à la fois |
 |----------------------------|:-----------------------:|-----------------:|
-| overhead de sérialisation  |            ✅            |                  |
+| overhead de sérialisation  |                         |                  |
 | granularité de controle    |                         |                  |
 | latence                    |                         |                  |
 | gérer interruptions réseau |                         |                  |
 | complexité du code         |                         |                  |
-
 ### 3. Adaptez le code Client.java et SimpleJavaServer.java pour que le client envoie la commande ping au serveur et le serveur repond avec la commande pong via un seul socket. Faire un ping-pong 4 fois.
 
 ### 4. La même chose mais avec JavaServer et event handlers.

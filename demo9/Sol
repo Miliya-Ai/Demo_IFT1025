@@ -26,11 +26,11 @@ en transferrant un objet ArrayList<Mot>:
 
 | Tables                     | un objet ArrayList<Mot> | un Mot à la fois |
 |----------------------------|:-----------------------:|-----------------:|
-| overhead de sérialisation  |                         |                  |
-| granularité de controle    |                         |                  |
-| latence                    |                         |                  |
-| gérer interruptions réseau |                         |                  |
-| complexité du code         |                         |                  |
+| overhead de sérialisation  |            ✅           |                  |
+| granularité de controle    |                         |       ✅         |
+| latence                    |                         |       ✅         |
+| gérer interruptions réseau |                         |       ✅         |
+| complexité du code         |            ✅           |                  |
 
 1. 传输一个ArrayList<Mot> 对象
 优点：
