@@ -28,25 +28,6 @@ public class PingClient {
 
             socket.close();
 
-            /*
-            for (int i = 0; i < 4; i++) {
-                // Send the "ping" command to the server
-                ObjectOutputStream objectOutputStream = new ObjectOutputStream(socket.getOutputStream());
-                objectOutputStream.writeObject("ping");
-
-                // Receive the "pong" response from the server
-                ObjectInputStream objectInputStream = new ObjectInputStream(socket.getInputStream());
-                String response = (String) objectInputStream.readObject();
-                System.out.println("Received from server: " + response);
-
-                // Close the streams
-                objectOutputStream.close();
-                objectInputStream.close();
-            }
-
-            // Close the socket
-            socket.close();
-             */
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }
