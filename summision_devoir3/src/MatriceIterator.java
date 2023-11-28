@@ -41,8 +41,7 @@ public class MatriceIterator<E> implements Iterator<E> {
 
 	@Override
 	public boolean hasNext() {
-		// TODO: implementer cette methode
-		return false;
+		return iCourant < max;
 	}
 
 	@Override
@@ -53,12 +52,9 @@ public class MatriceIterator<E> implements Iterator<E> {
 		E ret = this.m.get(iCourant, jCourant);
 		if (jCourant < this.max - 1) {
 			jCourant++;
-		} else if (iCourant < this.max - 1) {
-			iCourant++;
-			jCourant = 0;
 		} else {
-			iCourant = 0;
 			jCourant = 0;
+			iCourant++;
 		}
 		return ret;
 	}
@@ -77,9 +73,12 @@ public class MatriceIterator<E> implements Iterator<E> {
 	 * @param e - le nouveau élément
 	 */
 	public void remplace(E e) {
-		// TODO: corriger les parametres passées à set()
-		// (le reste du methode doit rester inchange)
-		this.m.set(0, 0, null);
+		if (iCourant == 0 && jCourant == 0) {
+			this.m.set(0, 0, e);
+		} else {
+			this.m.set(iCourant, jCourant, e);
+		}
 	}
+
 
 }
