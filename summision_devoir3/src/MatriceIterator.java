@@ -40,24 +40,28 @@ public class MatriceIterator<E> implements Iterator<E> {
 	}
 
 	@Override
-	public boolean hasNext() {
-		return iCourant < max;
-	}
+public boolean hasNext() {
+    return iCourant < max && jCourant < max;
+}
+
 
 	@Override
-	public E next() {
-		// TODO: corriger cette methode
-		iPrecedent = iCourant;
-		jPrecedent = jCourant;
-		E ret = this.m.get(iCourant, jCourant);
-		if (jCourant < this.max - 1) {
-			jCourant++;
-		} else {
-			jCourant = 0;
-			iCourant++;
-		}
-		return ret;
-	}
+public E next() {
+    if (!hasNext()) {
+        throw new NoSuchElementException();
+    }
+
+    E ret = this.m.get(iCourant, jCourant);
+    jCourant++;
+
+    if (jCourant == max) {
+        jCourant = 0;
+        iCourant++;
+    }
+
+    return ret;
+}
+
 
 	/**
 	 * Remplace le dernier élément visité par un autre élément. Ce méthode ne fait
@@ -73,12 +77,8 @@ public class MatriceIterator<E> implements Iterator<E> {
 	 * @param e - le nouveau élément
 	 */
 	public void remplace(E e) {
-		if (iCourant == 0 && jCourant == 0) {
-			this.m.set(0, 0, e);
-		} else {
-			this.m.set(iCourant, jCourant, e);
-		}
-	}
+    this.m.set(iPrecedent, jPrecedent, e);
+}
 
 
 }
