@@ -1,2 +1,2 @@
 # Demo_IFT1025
-Matière en train de mise à jour…
+Course materials for my role as teaching assistant for IFT1025: Programmation II in fall 2023
